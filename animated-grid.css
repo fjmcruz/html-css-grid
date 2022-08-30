@@ -1,0 +1,98 @@
+.animated-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-areas:
+    "a  b  c  d"
+    "l 🌟 🌟 e"
+    "k 🌟 🌟 f"
+    "j  i  h  g";
+  --stagger-delay: 200ms;
+  grid-template-columns: 240px auto auto 240px;
+  grid-template-rows: repeat(4, 25%);
+  height: 94vh;
+}
+
+@keyframes cardEntrance {
+  from {
+    filter: hue-rotate(180deg);
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  to {
+    filter: hue-rotate(0deg);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.card {
+  animation: cardEntrance 800ms ease-out;
+  animation-fill-mode: backwards;
+  background-color: darkcyan;
+}
+
+.card:nth-child(1) {
+  animation-delay: calc(1 * var(--stagger-delay));
+  grid-area: a;
+}
+
+.card:nth-child(2) {
+  animation-delay: calc(2 * var(--stagger-delay));
+  grid-area: b;
+}
+
+.card:nth-child(3) {
+  animation-delay: calc(3 * var(--stagger-delay));
+  grid-area: c;
+}
+
+.card:nth-child(4) {
+  animation-delay: calc(4 * var(--stagger-delay));
+  grid-area: d;
+}
+
+.card:nth-child(5) {
+  animation-delay: calc(5 * var(--stagger-delay));
+  grid-area: e;
+}
+
+.card:nth-child(6) {
+  animation-delay: calc(6 * var(--stagger-delay));
+  grid-area: f;
+}
+
+.card:nth-child(7) {
+  animation-delay: calc(7 * var(--stagger-delay));
+  grid-area: g;
+}
+
+.card:nth-child(8) {
+  animation-delay: calc(8 * var(--stagger-delay));
+  grid-area: h;
+}
+
+.card:nth-child(9) {
+  animation-delay: calc(9 * var(--stagger-delay));
+  grid-area: i;
+}
+
+.card:nth-child(10) {
+  animation-delay: calc(10 * var(--stagger-delay));
+  grid-area: j;
+}
+
+.card:nth-child(11) {
+  animation-delay: calc(11 * var(--stagger-delay));
+  grid-area: k;
+}
+
+.card:nth-child(12) {
+  animation-delay: calc(12 * var(--stagger-delay));
+  grid-area: l;
+}
+
+.card:last-child {
+  animation-delay: calc(13 * var(--stagger-delay));
+  grid-area: 🌟;
+}

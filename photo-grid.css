@@ -1,0 +1,16 @@
+.photo-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-auto-rows: 240px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media screen and (min-width: 600px) {
+  .card-tall {
+    grid-row: span 2 / auto;
+  }
+
+  .card-wide {
+    grid-column: span 2 / auto;
+  }
+}

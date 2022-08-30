@@ -1,0 +1,32 @@
+body {
+  background: rgb(20, 20, 20);
+  color: whitesmoke;
+  font-family: Arial;
+}
+
+section {
+  padding: 0px 2%;
+}
+
+.card {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: #353535;
+  border-radius: 4px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  height: 100%;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 400ms;
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-2px) scale(1.02);
+  overflow: hidden;
+}
